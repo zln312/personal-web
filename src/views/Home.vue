@@ -1,14 +1,16 @@
 <template>
   <div>
-    <h2>首页</h2>
+    <article-list></article-list>
   </div>
   
 </template>
 
 <script>
+import ArticleList from './ArticleList'
   export default {
     name:"Home",
     components:{
+      ArticleList
       }
   }
 </script>

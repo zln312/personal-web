@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="outer">
     <div class="line"></div>
     <el-menu
       :default-active="activeIndex"
@@ -34,3 +34,8 @@ export default {
   },
 };
 </script>
+<style scoped>
+  .outer{
+    z-index: 10;
+  }
+</style>
