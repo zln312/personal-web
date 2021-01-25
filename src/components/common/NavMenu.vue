@@ -28,14 +28,9 @@ export default {
   methods: {
     handleSelect(key, keyPath) {
       console.log(key, keyPath);
-      console.log(this.$router.push(key).catch(err=>err));
-      
     },
   },
 };
 </script>
 <style scoped>
-  .outer{
-    z-index: 10;
-  }
 </style>

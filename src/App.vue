@@ -28,9 +28,13 @@ export default {
   position: fixed;
   top: 0;
   left: 10%;
+  z-index: 10;
+  background-color: white;
 }
 
 .main {
   margin-top: 100px;
+  width: 600px;
+  margin: 100px auto 30px;
 }
 </style>
