@@ -12,9 +12,13 @@
 <script>
 import NavMenu from "./components/common/NavMenu";
 import BreadCrumb from "./components/common/BreadCrumb";
-
 export default {
   name: "App",
+  created(){
+    this.$http.get(this.$api.getArticleList).then(res=>{
+      console.log(res);
+    })
+  },
   components: {
     NavMenu,
     BreadCrumb,
