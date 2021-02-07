@@ -1,3 +1,11 @@
+<!--
+ * @Author: your name
+ * @Date: 2021-01-24 14:32:07
+ * @LastEditTime: 2021-02-07 15:36:54
+ * @LastEditors: your name
+ * @Description: In User Settings Edit
+ * @FilePath: \personal\src\views\ArticleList.vue
+-->
 <template>
   <div class="list-outer">
     <div v-for="(item,index) in list" :key="index" @click="listClick(item.id)">
@@ -13,6 +21,7 @@ export default {
   mounted(){
      this.$http.get(this.$api.getArticleList).then(res=>{
        this.list = res.data;
+       console.log(res.data);
     })
   },
   components:{
