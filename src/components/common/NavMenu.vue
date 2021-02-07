@@ -1,3 +1,11 @@
+<!--
+ * @Author: your name
+ * @Date: 2021-01-17 20:39:53
+ * @LastEditTime: 2021-02-07 17:48:57
+ * @LastEditors: Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: \personal\src\components\common\NavMenu.vue
+-->
 <template>
   <div class="outer">
     <div class="line"></div>
@@ -28,6 +36,7 @@ export default {
   methods: {
     handleSelect(key, keyPath) {
       console.log(key, keyPath);
+      this.$router.push(keyPath[0])
     },
   },
 };
