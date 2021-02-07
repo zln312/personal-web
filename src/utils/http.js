@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2021-02-03 23:05:30
- * @LastEditTime: 2021-02-03 23:52:31
+ * @LastEditTime: 2021-02-05 18:39:05
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \personal\src\utils\http.js
@@ -44,7 +44,7 @@ function post(url, param, headers) {
             },
       })
       .then((res) => {
-        if (res.data.Code === 200) {
+        if (res.data.code === 200) {
           resolve(res.data);
         } else {
           reject(res.data);

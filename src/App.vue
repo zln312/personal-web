@@ -1,3 +1,11 @@
+<!--
+ * @Author: your name
+ * @Date: 2021-01-17 19:05:44
+ * @LastEditTime: 2021-02-05 17:21:03
+ * @LastEditors: Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: \personal\src\App.vue
+-->
 <template>
   <div id="app">
     <div class="top">
@@ -15,9 +23,7 @@ import BreadCrumb from "./components/common/BreadCrumb";
 export default {
   name: "App",
   created(){
-    this.$http.get(this.$api.getArticleList).then(res=>{
-      console.log(res);
-    })
+   
   },
   components: {
     NavMenu,

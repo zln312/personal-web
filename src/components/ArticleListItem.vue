@@ -1,14 +1,21 @@
+<!--
+ * @Author: your name
+ * @Date: 2021-01-24 15:09:39
+ * @LastEditTime: 2021-02-05 18:27:30
+ * @LastEditors: Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: \personal\src\components\ArticleListItem.vue
+-->
 <template>
   <div class="item-outer">
-    <img class="article-img" src="../assets/logo.png" />
+    <img class="article-img" src="../assets/logo.png" alt=""/>
     <div class="item-right">
-      <div class="article-title">微信小程序---页面间传值</div>
+      <div class="article-title">{{val.title}}</div>
       <span class="summary"
-        >从一月份到现在的四月份，这个寒假足足放了三个月，而且开学时间还未定，最快都要五月吧，而且我在广东，这应该更久吧，极大可能这学期真的都在上网课。
-        由于这个疫情，从国内到全世界恶化，影响还是挺大的，多希望能早点结束啊。</span
+        >{{val.intro}}</span
       >
       <div class="attr">
-        <span class="tag">技术分享</span>
+        <span class="tag">{{val.tag}}</span>
         <span class="time">2021/1/24 12:34</span>
       </div>
     </div>
@@ -18,6 +25,9 @@
 <script>
 export default {
   name: "ArticleListItem",
+  props:[
+    'val'
+  ]
 };
 </script>
 

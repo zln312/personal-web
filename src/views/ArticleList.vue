@@ -1,7 +1,7 @@
 <template>
   <div class="list-outer">
-    <div v-for="(item,index) in list" :key="index" @click="listClick(index)">
-    <article-list-item></article-list-item>
+    <div v-for="(item,index) in list" :key="index" @click="listClick(item.id)">
+    <article-list-item :val=item></article-list-item>
     </div>
   </div>
 </template>
@@ -10,19 +10,23 @@
 import ArticleListItem from '../components/ArticleListItem'
 export default {
   name: 'ArticleList',
+  mounted(){
+     this.$http.get(this.$api.getArticleList).then(res=>{
+       this.list = res.data;
+    })
+  },
   components:{
     ArticleListItem
   },
   data(){
     return {
       list:[
-        1,2,3
       ]
     }
   },
   methods:{
-    listClick(index){
-      this.$router.push(`/detail/${index}`)
+    listClick(id){
+      this.$router.push(`/detail/${id}`)
     }
   }
 }
