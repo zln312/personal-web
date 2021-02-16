@@ -1,8 +1,15 @@
+<!--
+ * @Author: your name
+ * @Date: 2021-01-25 19:45:49
+ * @LastEditTime: 2021-02-16 23:38:45
+ * @LastEditors: your name
+ * @Description: In User Settings Edit
+ * @FilePath: \personal\src\views\ArticleDetail.vue
+-->
 <template>
   <div>
     <div class="title">{{article.title}}</div>
-    <div class="content">
-      {{article.content}}
+    <div class="content" v-html="article.content">
     </div>
   </div>
 </template>

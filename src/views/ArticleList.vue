@@ -1,8 +1,8 @@
 <!--
  * @Author: your name
  * @Date: 2021-01-24 14:32:07
- * @LastEditTime: 2021-02-07 15:36:54
- * @LastEditors: your name
+ * @LastEditTime: 2021-02-16 23:36:34
+ * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \personal\src\views\ArticleList.vue
 -->
@@ -19,8 +19,8 @@ import ArticleListItem from '../components/ArticleListItem'
 export default {
   name: 'ArticleList',
   mounted(){
-     this.$http.get(this.$api.getArticleList).then(res=>{
-       this.list = res.data;
+     this.$http.post(this.$api.getArticleList,{pageSize:5,pageNum:1}).then(res=>{
+       this.list = res.data.content;
        console.log(res.data);
     })
   },
