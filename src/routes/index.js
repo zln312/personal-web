@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2021-01-17 21:20:55
- * @LastEditTime: 2021-02-07 17:47:04
+ * @LastEditTime: 2021-02-17 12:10:59
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \personal\src\routes\index.js
@@ -22,12 +22,9 @@ VueRouter.prototype.push = function push(location) {
   return originalPush.call(this, location).catch(err => err);
 }
 const routes = [
+ 
     {
         path: '/',
-        redirect: '/home'
-    },
-    {
-        path: '/home',
         component: Home
     },
     {

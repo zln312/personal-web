@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-01-17 19:05:44
- * @LastEditTime: 2021-02-05 17:21:03
+ * @LastEditTime: 2021-02-17 12:37:40
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \personal\src\App.vue
@@ -10,7 +10,6 @@
   <div id="app">
     <div class="top">
       <nav-menu></nav-menu>
-      <bread-crumb></bread-crumb>
     </div>
 
     <router-view class="main"></router-view>
@@ -19,7 +18,6 @@
 
 <script>
 import NavMenu from "./components/common/NavMenu";
-import BreadCrumb from "./components/common/BreadCrumb";
 export default {
   name: "App",
   created(){
@@ -27,17 +25,16 @@ export default {
   },
   components: {
     NavMenu,
-    BreadCrumb,
   },
 };
 </script>
 
 <style>
 .top {
-  width: 70%;
+  width: 100%;
   position: fixed;
   top: 0;
-  left: 10%;
+  left: 0;
   z-index: 10;
   background-color: white;
 }
