@@ -1,44 +1,49 @@
 /*
  * @Author: your name
  * @Date: 2021-01-17 21:20:55
- * @LastEditTime: 2021-02-17 12:10:59
+ * @LastEditTime: 2021-02-20 21:03:50
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \personal\src\routes\index.js
  */
-import VueRouter from 'vue-router'
-import Vue from 'vue'
+import VueRouter from "vue-router";
+import Vue from "vue";
 
-const Home = () => import('../views/Home')
-const About = () => import('../views/About')
-const ArticleDetail = () => import('../views/ArticleDetail')
+const About = () => import("../views/About");
+const ArticleDetail = () => import("../views/ArticalDetail/index.vue");
+const Layout = () => import("../layout/Layout.vue");
+const ArticleList = () => import("../views/ArticalList/index.vue");
 
-
-Vue.use(VueRouter)
+Vue.use(VueRouter);
 
 // 解决重复点击导航路由报错
 const originalPush = VueRouter.prototype.push;
 VueRouter.prototype.push = function push(location) {
-  return originalPush.call(this, location).catch(err => err);
-}
+  return originalPush.call(this, location).catch((err) => err);
+};
 const routes = [
- 
-    {
-        path: '/',
-        component: Home
-    },
-    {
-        path: '/about',
-        component: About
-    },
-    {
-        path: '/detail/:id',
-        component: ArticleDetail
-    }
-]
+  {
+    path: "/",
+    component: Layout,
+    children: [
+      {
+        path: "/",
+        component: ArticleList,
+      },
+      {
+        path: "/about",
+        component: About,
+      },
+      {
+        path: "/detail/:id",
+        component: ArticleDetail,
+      },
+    ],
+  },
+];
 const router = new VueRouter({
-    routes,
-    mode: 'history'
-})
+  routes,
+  mode: "history",
+});
 
-export default router
+export default router;

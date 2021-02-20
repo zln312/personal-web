@@ -1,14 +1,14 @@
 <!--
  * @Author: your name
  * @Date: 2021-01-17 20:39:53
- * @LastEditTime: 2021-02-17 12:53:22
+ * @LastEditTime: 2021-02-20 21:10:41
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \personal\src\components\common\NavMenu.vue
 -->
 <template>
   <div class="outer">
-     <img src="../../assets/shell.jpg" alt="" height="60px"> 
+     <img src="~@/assets/shell.jpg" alt="" height="60px"> 
     <el-menu
       :default-active="activeIndex"
       class="el-menu-demo"
@@ -27,7 +27,7 @@
 
 <script>
 export default {
-  name:'NavMenu',
+  name:'TheHeading',
   data() {
     return {
       activeIndex: "1",

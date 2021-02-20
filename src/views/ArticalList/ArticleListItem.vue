@@ -1,14 +1,14 @@
 <!--
  * @Author: your name
  * @Date: 2021-01-24 15:09:39
- * @LastEditTime: 2021-02-05 18:27:30
+ * @LastEditTime: 2021-02-20 21:25:24
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \personal\src\components\ArticleListItem.vue
 -->
 <template>
   <div class="item-outer">
-    <img class="article-img" src="../assets/logo.png" alt=""/>
+    <img class="article-img" src="~@/assets/logo.png" alt=""/>
     <div class="item-right">
       <div class="article-title">{{val.title}}</div>
       <span class="summary"
@@ -31,7 +31,7 @@ export default {
 };
 </script>
 
-<style scoped>
+<style scoped lang="scss">
 .item-outer {
   display: flex;
   background-color: aquamarine;
@@ -87,7 +87,7 @@ export default {
   height: 17px;
   display: inline-block;
   background-size: contain;
-  background-image: url('../assets/tag.svg');
+  background-image: url('~@/assets/tag.svg');
   vertical-align: text-top;
 }
 .time {
@@ -100,7 +100,7 @@ export default {
   height: 15px;
   display:inline-block;
   background-size: contain;
-  background-image: url('../assets/time.svg');
+  background-image: url('~@/assets/time.svg');
   vertical-align: text-top;
 
 }

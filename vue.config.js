@@ -1,12 +1,11 @@
 /*
  * @Author: your name
  * @Date: 2021-02-03 22:29:46
- * @LastEditTime: 2021-02-05 18:26:14
+ * @LastEditTime: 2021-02-20 21:25:14
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \personal\vue.config.js
  */
-
  module.exports = {
    devServer: {
      proxy: {
@@ -20,5 +19,12 @@
          }
        }
      }
-   }
+   },
+  //  css: {
+  //    loaderOptions: {
+  //      sass: {
+  //        additionalData: `@import "~@/assets/scss/index.scss"`
+  //      }
+  //    }
+  //  }
  }
