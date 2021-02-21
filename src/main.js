@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2021-01-17 19:05:44
- * @LastEditTime: 2021-02-03 23:44:20
+ * @LastEditTime: 2021-02-21 20:23:41
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \personal\src\main.js
@@ -12,7 +12,7 @@ import App from './App.vue'
 import router from './routes/index'
 import http from './utils/http'
 import api from './utils/api'
-
+import './assets/style/reset.css'
 Vue.config.productionTip = false
 Vue.use(Button)
 Vue.use(Menu)
