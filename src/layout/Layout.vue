@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-01-24 14:11:41
- * @LastEditTime: 2021-02-21 21:06:00
+ * @LastEditTime: 2021-02-22 21:53:45
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \personal\src\views\Layout.vue
@@ -38,6 +38,8 @@ export default {
   background-color: #fff;
 }
 .main {
+  width: 50%;
+  margin: 0 auto;
   padding-top: 100px;
   padding-bottom: 50px;
 }

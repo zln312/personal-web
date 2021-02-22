@@ -1,15 +1,15 @@
 <!--
  * @Author: your name
  * @Date: 2021-01-24 14:32:07
- * @LastEditTime: 2021-02-20 21:02:31
+ * @LastEditTime: 2021-02-22 21:31:09
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \personal\src\views\ArticleList.vue
 -->
 <template>
   <div class="list-outer">
-    <div v-for="(item,index) in list" :key="index" @click="listClick(item.id)">
-    <article-list-item :val=item></article-list-item>
+    <div v-for="(item,index) in list" :key="index">
+    <article-list-item :val=item @goto="goto(item.id)"></article-list-item>
     </div>
   </div>
 </template>
@@ -34,7 +34,7 @@ export default {
     }
   },
   methods:{
-    listClick(id){
+    goto(id){
       this.$router.push(`/detail/${id}`)
     }
   }

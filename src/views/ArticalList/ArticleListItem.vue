@@ -1,24 +1,20 @@
 <!--
  * @Author: your name
  * @Date: 2021-01-24 15:09:39
- * @LastEditTime: 2021-02-20 21:25:24
+ * @LastEditTime: 2021-02-22 21:30:01
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \personal\src\components\ArticleListItem.vue
 -->
 <template>
-  <div class="item-outer">
-    <img class="article-img" src="~@/assets/logo.png" alt=""/>
-    <div class="item-right">
+  <div class="container">
       <div class="article-title">{{val.title}}</div>
-      <span class="summary"
-        >{{val.intro}}</span
-      >
-      <div class="attr">
+      <span>{{val.intro}}</span>
+      <div class="item-btm">
         <span class="tag">{{val.tag}}</span>
         <span class="time">2021/1/24 12:34</span>
       </div>
-    </div>
+      <el-button size="small" class="item-btn" @click="clickShow">查看原文</el-button>
   </div>
 </template>
 
@@ -27,15 +23,43 @@ export default {
   name: "ArticleListItem",
   props:[
     'val'
-  ]
+  ],
+  methods:{
+    clickShow(){
+      this.$emit('goto')
+    }
+  }
 };
 </script>
 
 <style scoped lang="scss">
+.container{
+  width: 400px;
+  height: 150px;
+  background-color: #E65C5C;
+  margin-bottom: 20px;
+  border-radius: 2px;
+  padding: 20px;
+  position: relative;
+}
 .item-outer {
   display: flex;
   background-color: aquamarine;
   margin: 30px 0;
+}
+.item-btm{
+  position: absolute;
+  bottom: 10px;
+  left: 20px;
+}
+.item-btn{
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  background-color: #C4C4C4;
+  color:#D62D2D;
+  font-size: 13px;
+  font-weight: 600;
 }
 .article-img {
   width: 200px;
@@ -44,7 +68,7 @@ export default {
 .article-title {
   font-size: 20px;
   font-weight: 600;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
 }
 .item-right {
   margin: 0 30px;
@@ -80,6 +104,7 @@ export default {
 .tag {
   font-size: 10px;
   color:maroon;
+  margin-right: 10px;
   }
 .tag::before{
   content:'';
@@ -92,7 +117,7 @@ export default {
 }
 .time {
   font-size: 10px;
-  color:magenta;
+  color:#fff;
 }
 .time::before{
   content:'';
