@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-01-24 15:09:39
- * @LastEditTime: 2021-02-22 21:30:01
+ * @LastEditTime: 2021-02-25 22:26:59
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \personal\src\components\ArticleListItem.vue
@@ -11,7 +11,7 @@
       <div class="article-title">{{val.title}}</div>
       <span>{{val.intro}}</span>
       <div class="item-btm">
-        <span class="tag">{{val.tag}}</span>
+        <span class="tag">{{val.tagName}}</span>
         <span class="time">2021/1/24 12:34</span>
       </div>
       <el-button size="small" class="item-btn" @click="clickShow">查看原文</el-button>
