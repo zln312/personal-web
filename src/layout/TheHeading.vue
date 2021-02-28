@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-01-17 20:39:53
- * @LastEditTime: 2021-02-20 21:10:41
+ * @LastEditTime: 2021-02-28 22:06:32
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \personal\src\components\common\NavMenu.vue
@@ -10,11 +10,11 @@
   <div class="outer">
      <img src="~@/assets/shell.jpg" alt="" height="60px"> 
     <el-menu
-      :default-active="activeIndex"
+      :default-active="'/'"
       class="el-menu-demo"
       mode="horizontal"
       @select="handleSelect"
-      background-color="dimgrey"
+      background-color="#000"
       text-color="#B2DFDB"
       active-text-color="#B2DFDB"
       router: true
@@ -45,7 +45,10 @@ export default {
   .outer{
     display: flex;
     justify-content: space-around;
-    background-color:dimgrey;
+    background-color:#000;
   }
+  .el-menu.el-menu--horizontal {
+    border-bottom: solid 1px #000;
+}
 
 </style>

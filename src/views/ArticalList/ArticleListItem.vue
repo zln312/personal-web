@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-01-24 15:09:39
- * @LastEditTime: 2021-02-25 22:26:59
+ * @LastEditTime: 2021-02-28 21:43:16
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \personal\src\components\ArticleListItem.vue
@@ -12,7 +12,7 @@
       <span>{{val.intro}}</span>
       <div class="item-btm">
         <span class="tag">{{val.tagName}}</span>
-        <span class="time">2021/1/24 12:34</span>
+        <span class="time">{{val.updateTime | dateFmt('YYYY-MM-DD HH:mm:ss')}}</span>
       </div>
       <el-button size="small" class="item-btn" @click="clickShow">查看原文</el-button>
   </div>
@@ -28,13 +28,14 @@ export default {
     clickShow(){
       this.$emit('goto')
     }
-  }
+  },
+
 };
 </script>
 
 <style scoped lang="scss">
 .container{
-  width: 400px;
+  width: 700px;
   height: 150px;
   background-color: #E65C5C;
   margin-bottom: 20px;
